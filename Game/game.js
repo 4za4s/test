@@ -54,9 +54,12 @@ function removeSave(){
 
 window.setInterval(function(){
 	loops();
-	save();
 }, 200);
+window.setInterval(function(){
+	save();
+}, 60000);
 
+save();
 load();
 
 
