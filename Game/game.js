@@ -39,7 +39,7 @@ function save(){
 }
 
 function load(){
-	if(localStorage,getItem("save") !== "null"){
+	if(localStorage.getItem("save") !== "null"){
 		var savegame = JSON.parse(localStorage.getItem("save"));
 		if (typeof savegame !== "undefined"){
 			machineArray = savegame;
