@@ -39,10 +39,18 @@ function save(){
 }
 
 function load(){
-	var savegame = JSON.parse(localStorage.getItem("save"));
-	if (typeof savegame !== "undefined"){
-		machineArray = savegame;
+	if(localStorage,getItem("save") !== "null"){
+		var savegame = JSON.parse(localStorage.getItem("save"));
+		if (typeof savegame !== "undefined"){
+			machineArray = savegame;
+		}
 	}
+}
+
+
+function removeSave(){
+	localStorage.removeItem('save');
+	window.location.reload();
 }
 
 window.setInterval(function(){
