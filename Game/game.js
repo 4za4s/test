@@ -12,10 +12,9 @@ machineArray.push([0, 1000000, 10, 6, 1.001, "7", 1]); //7
 function press(machine){
 	if(machineArray[0][0] >= machineArray[machine][1]){
 		machineArray[0][0] = machineArray[0][0] - machineArray[machine][1];
-		machineArray[0][0] = (Math.round(machineArray[0][0]*1000000)/1000000);
 		machineArray[machine][0] = machineArray[machine][0] + machineArray[machine][6];
 		machineArray[machine][1] = Math.round(Math.pow(machineArray[machine][1]*1.1, machineArray[machine][4])*10)/10
-		
+		machineArray[0][0] = (Math.round(machineArray[0][0]*1000000)/1000000);
 		var cost = "cost" + machineArray[machine][5];
 		document.getElementById(cost).innerHTML = machineArray[machine][1];
 		document.getElementById(machineArray[machine][5]).innerHTML = machineArray[machine][0];
