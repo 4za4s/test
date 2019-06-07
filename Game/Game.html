@@ -1,2 +1,43 @@
 <!DOCTYPE html>
-<p>Nothing for now</p>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./game.css" />
+	</head>
+	<body>
+		points: <span id="0">0</span>
+		<br/>
+		<button onclick="press(0)">Click</button>
+		cost: <span id="cost0">0</span>
+		<br/>
+		<button onclick="press(1)">Machine 1</button>
+		amount: <span id="1">0</span>
+		cost: <span id="cost1">1</span>
+		<br/>
+		<button onclick="press(2)">Machine 2</button>
+		amount: <span id="2">0</span>
+		cost: <span id="cost2">10</span>
+		<br/>
+		<button onclick="press(3)">Machine 3</button>
+		amount: <span id="3">0</span>
+		cost: <span id="cost3">100</span>
+		<br/>
+		<button onclick="press(4)">Machine 4</button>
+		amount: <span id="4">0</span>
+		cost: <span id="cost4">1000</span>
+		<br/>
+		<button onclick="press(5)">Machine 5</button>
+		amount: <span id="5">0</span>
+		cost: <span id="cost5">10000</span>
+		<br/>
+		<button onclick="press(6)">Machine 6</button>
+		amount: <span id="6">0</span>
+		cost: <span id="cost6">100000</span>
+		<br/>
+		<button onclick="press(7)">Machine 7</button>
+		amount: <span id="7">0</span>
+		cost: <span id="cost7">1000000</span>
+		
+		<button onclick="localStorage.removeItem('save')">Remove Save</button>
+		<script type="text/javascript" src="./game.js"></script>
+	</body>
+</html>
