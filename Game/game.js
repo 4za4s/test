@@ -34,7 +34,7 @@ function loops(){
 }
 
 function save(){
-	var save = JSON.stringifymachineArray;
+	var save = JSON.stringify(machineArray);
 	localStorage.setItem("save", save);
 }
 
