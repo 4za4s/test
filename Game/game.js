@@ -60,7 +60,7 @@ window.setInterval(function(){
 
 window.setInterval(function(){
 	saver();
-}, 50000);
+}, 5000);
 
 load();
 
