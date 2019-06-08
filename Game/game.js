@@ -1,4 +1,5 @@
 var machineArray = [];
+var save = null;
 //amount, cost, output, where, costScale, name, click increase amount
 machineArray.push([0, 0, 0, 0, 1, "0", 0.01]); //points
 machineArray.push([0, 1, 0.00001, 0, 1.01, "1", 0.1]); //1
@@ -32,8 +33,8 @@ function loops(){
 	}
 }
 
-function save(){
-	var save = JSON.stringify(machineArray);
+function saver(){
+	save = JSON.stringify(machineArray);
 	localStorage.setItem("save", save);
 }
 
@@ -59,7 +60,7 @@ window.setInterval(function(){
 	save();
 }, 60000);
 
-save();
+saver();
 load();
 
 
