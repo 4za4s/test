@@ -1,7 +1,7 @@
 var machineArray = [];
 //amount, cost, output, where, costScale, name, click increase amount
 machineArray.push([0, 0, 0, 0, 1, "0", 0.01]); //points
-machineArray.push([0, 0.1, 0.001, 0, 1.1, "1", 0.1]); //1
+machineArray.push([0, 0.1, 0.01, 0, 1.1, "1", 0.1]); //1
 machineArray.push([0, 1, 0.01, 1, 1.005, "2", 1]); //2
 machineArray.push([0, 10, 0.01, 2, 1.001, "3", 1]); //3
 machineArray.push([0, 100, 0.01, 3, 1.001, "4", 1]); //4
