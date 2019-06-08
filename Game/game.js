@@ -56,7 +56,7 @@ function removeSave(){
 
 window.setInterval(function(){
 	loops();
-}, 200);
+}, 250);
 
 window.setInterval(function(){
 	saver();
