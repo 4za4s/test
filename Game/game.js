@@ -1,5 +1,6 @@
+var save;
+var savegame;
 var machineArray = [];
-var save = null;
 //amount, cost, output, where, costScale, name, click increase amount
 machineArray.push([0, 0, 0, 0, 1, "0", 0.01]); //points
 machineArray.push([0, 1, 0.00001, 0, 1.01, "1", 0.1]); //1
@@ -39,9 +40,9 @@ function saver(){
 }
 
 function load(){
-	if(localStorage.getItem("save") !== "null"){
-		var savegame = JSON.parse(localStorage.getItem("save"));
-		if (typeof savegame !== "undefined"){
+	if(save !== undefined){
+		savegame = JSON.parse(localStorage.getItem("save"));
+		if (typeof savegame !== null ){
 			machineArray = savegame;
 		}
 	}
@@ -49,7 +50,7 @@ function load(){
 
 
 function removeSave(){
-	localStorage.removeItem('save');
+	localStorage.removeItem("save");
 	window.location.reload();
 }
 
@@ -60,7 +61,6 @@ window.setInterval(function(){
 	save();
 }, 60000);
 
-saver();
 load();
 
 
