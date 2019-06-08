@@ -1,13 +1,13 @@
 var machineArray = [];
 //amount, cost, output, where, costScale, name, click increase amount
-machineArray.push([0, 0, 0, 0, 1, "0", 0.01]); //points
-machineArray.push([0, 0.1, 0.01, 0, 1.1, "1", 0.1]); //1
-machineArray.push([0, 1, 0.01, 1, 1.005, "2", 1]); //2
-machineArray.push([0, 10, 0.01, 2, 1.001, "3", 1]); //3
-machineArray.push([0, 100, 0.01, 3, 1.001, "4", 1]); //4
-machineArray.push([0, 1000, 0.01, 4, 1.001, "5", 1]); //5
-machineArray.push([0, 10000, 0.01, 5, 1.001, "6", 1]); //6
-machineArray.push([0, 100000, 0.01, 6, 1.001, "7", 1]); //7
+machineArray.push([0, 0, 0, 0, 1, "0", 0.1]); //points
+machineArray.push([0, 1, 0.01, 0, 1.1, "1", 0.1]); //1
+machineArray.push([0, 10, 0.01, 1, 1.005, "2", 1]); //2
+machineArray.push([0, 100, 0.01, 2, 1.001, "3", 1]); //3
+machineArray.push([0, 1000, 0.01, 3, 1.001, "4", 1]); //4
+machineArray.push([0, 10000, 0.01, 4, 1.001, "5", 1]); //5
+machineArray.push([0, 100000, 0.01, 5, 1.001, "6", 1]); //6
+machineArray.push([0, 1000000, 0.01, 6, 1.001, "7", 1]); //7
 
 function press(machine){
 	if(machineArray[0][0] >= machineArray[machine][1]){
@@ -57,7 +57,7 @@ function removeSave(){
 
 window.setInterval(function(){
 	loops();
-}, 150);
+}, 80);
 
 window.setInterval(function(){
 	saver();
