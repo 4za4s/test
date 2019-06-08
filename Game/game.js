@@ -13,8 +13,9 @@ function press(machine){
 	if(machineArray[0][0] >= machineArray[machine][1]){
 		machineArray[0][0] = machineArray[0][0] - machineArray[machine][1];
 		machineArray[machine][0] = machineArray[machine][0] + machineArray[machine][6];
-		machineArray[machine][1] = Math.round(machineArray[machine][1]*1.07*100)/100
-		machineArray[0][0] = (Math.round(machineArray[0][0]*1000000)/1000000);
+		machineArray[machine][1] = Math.round(machineArray[machine][1]*1.07*100)/100;
+		machineArray[0][0] = (Math.round(machineArray[0][0]*1000)/1000);
+		machineArray[machine][0] = (Math.round(machineArray[machine][0]*1000)/1000);
 		var cost = "cost" + machineArray[machine][5];
 		document.getElementById(cost).innerHTML = machineArray[machine][1];
 		document.getElementById(machineArray[machine][5]).innerHTML = machineArray[machine][0];
@@ -25,8 +26,8 @@ function press(machine){
 function loops(){
 	for(var i = 1; i < machineArray.length; i++){
 		machineArray[machineArray[i][3]][0] = machineArray[machineArray[i][3]][0] + machineArray[i][2]*machineArray[i][0];
-		machineArray[0][0] = (Math.round(machineArray[0][0]*1000000)/1000000);
-		machineArray[i][0] = (Math.round(machineArray[i][0]*1000000)/1000000)
+		machineArray[0][0] = (Math.round(machineArray[0][0]*1000)/1000);
+		machineArray[i][0] = (Math.round(machineArray[i][0]*1000)/1000);
 		document.getElementById(machineArray[i][5]).innerHTML = machineArray[i][0];
 		document.getElementById("0").innerHTML = machineArray[0][0];
 	}
@@ -56,7 +57,7 @@ function removeSave(){
 
 window.setInterval(function(){
 	loops();
-}, 250);
+}, 150);
 
 window.setInterval(function(){
 	saver();
