@@ -1,0 +1,33 @@
+body {
+	font-family: monospace, "Lucida Console";
+	background-color : #202020;
+	color: white;
+	font-size: 14px;
+}
+
+.points {
+	background-color: #424242;
+    border: 3px inset silver;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+
+.button {
+    background-color: #4a5151;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.costs {
+	position: relative;
+	left: 103px;
+	top: -15px;
+}

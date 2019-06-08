@@ -1,3 +1,4 @@
+var onlyUsedOnce = 0;
 var machineArray = [];
 //amount, cost, output, where, costScale, name, click increase amount
 machineArray.push([0, 0, 0, 0, 1, "0", 0.1]); //points
@@ -10,12 +11,17 @@ machineArray.push([0, 100000, 0.01, 5, 1.001, "6", 1]); //6
 machineArray.push([0, 1000000, 0.01, 6, 1.001, "7", 1]); //7
 
 function press(machine){
+	//checks if you can afford cost
 	if(machineArray[0][0] >= machineArray[machine][1]){
 		machineArray[0][0] = machineArray[0][0] - machineArray[machine][1];
 		machineArray[machine][0] = machineArray[machine][0] + machineArray[machine][6];
+		
+		//kill the rogue decimals
 		machineArray[machine][1] = Math.round(machineArray[machine][1]*1.07*100)/100;
 		machineArray[0][0] = (Math.round(machineArray[0][0]*1000)/1000);
+		//set new cost
 		machineArray[machine][0] = (Math.round(machineArray[machine][0]*1000)/1000);
+		
 		var cost = "cost" + machineArray[machine][5];
 		document.getElementById(cost).innerHTML = machineArray[machine][1];
 		document.getElementById(machineArray[machine][5]).innerHTML = machineArray[machine][0];
@@ -24,7 +30,13 @@ function press(machine){
 };
 
 function loops(){
+	//boosts machine 1 when you purchase machine 7
+	if(machineArray[7][0] === 1 && onlyUsedOnce === 0){
+		machineArray[1][2] = 1;
+		onlyUsedOnce = 10;
+	}
 	for(var i = 1; i < machineArray.length; i++){
+		
 		machineArray[machineArray[i][3]][0] = machineArray[machineArray[i][3]][0] + machineArray[i][2]*machineArray[i][0];
 		machineArray[0][0] = (Math.round(machineArray[0][0]*1000)/1000);
 		machineArray[i][0] = (Math.round(machineArray[i][0]*1000)/1000);
@@ -44,9 +56,10 @@ function load(){
 		machineArray = savegame;
 	}
 	for(var i = 1; i < machineArray.length; i++){
-			document.getElementById(machineArray[i][5]).innerHTML = machineArray[i][0];
-			var cost = "cost" + machineArray[i][5];
-			document.getElementById(cost).innerHTML = machineArray[i][1];
+		//sets cost for each machine on load
+		document.getElementById(machineArray[i][5]).innerHTML = machineArray[i][0];
+		var cost = "cost" + machineArray[i][5];
+		document.getElementById(cost).innerHTML = machineArray[i][1];
 	}
 }
 
