@@ -95,7 +95,7 @@ var machinesDefault = {
 	}
 }
 
-machines = [machinesDefault]
+machines = JSON.parse(JSON.stringify(machinesDefault))
 
 for (var title in machines){
 	var btn = document.createElement("BUTTON");
@@ -213,7 +213,7 @@ function load(){
 		}
 	}
 	else {
-		machines = [machinesDefault]	
+		machines = JSON.parse(JSON.stringify(machinesDefault))
 	}
 	if (savePoints !== null){
 		points = savePoints;
