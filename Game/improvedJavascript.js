@@ -12,77 +12,77 @@ var machinesDefault = {
 		name: "Machine 1",
 		clicks: 0,
 		amount: 0,
-		cost: [1, 0.07, "points"],
+		cost: [10, 0.07, "points"],
 		output: ["points", 0.01]
 	},
 	machine2: {
 		name: "Machine 2",
 		clicks: 0,
 		amount: 0,
-		cost: [10, 0.07, "machine1"],
+		cost: [10, 0.08, "machine1"],
 		output: ["machine1", 0.01]
 	},
 	machine3: {
 		name: "Machine 3",
 		clicks: 0,
 		amount: 0,
-		cost: [100, 0.07, "machine2"],
+		cost: [10, 0.09, "machine2"],
 		output: ["machine2", 0.01]
 	},
 	machine4: {
 		name: "Machine 4",
 		clicks: 0,
 		amount: 0,
-		cost: [1000, 0.07, "machine3"],
+		cost: [10, 0.1 "machine3"],
 		output: ["machine3", 0.01]
 	},
 	machine5: {
 		name: "Machine 5",
 		clicks: 0,
 		amount: 0,
-		cost: [10000, 0.07, "machine4"],
+		cost: [10, 0.11, "machine4"],
 		output: ["machine4", 0.01]
 	},
 	machine6: {
 		name: "Machine 6",
 		clicks: 0,
 		amount: 0,
-		cost: [100000, 0.07, "machine5"],
+		cost: [10, 0.12, "machine5"],
 		output: ["machine5", 0.01]
 	},
 	machine7: {
 		name: "Machine 7",
 		clicks: 0,
 		amount: 0,
-		cost: [1000000, 0.07, "machine6"],
+		cost: [10, 0.13, "machine6"],
 		output: ["machine6", 0.01]
 	},
 	machine8: {
 		name: "Machine 8",
 		clicks: 0,
 		amount: 0,
-		cost: [10000000, 0.07, "machine7"],
+		cost: [10, 0.14, "machine7"],
 		output: ["machine7", 0.01]
 	},
 	machine9: {
 		name: "Machine 9",
 		clicks: 0,
 		amount: 0,
-		cost: [100000000, 0.07, "machine8"],
+		cost: [10, 0.15, "machine8"],
 		output: ["machine8", 0.01]
 	},
 	machine10: {
 		name: "Machine 10",
 		clicks: 0,
 		amount: 0,
-		cost: [1000000000, 0.07, "machine9"],
+		cost: [10, 0.16, "machine9"],
 		output: ["machine9", 0.01]
 	},
 	machine11: {
 		name: "Machine 11",
 		clicks: 0,
 		amount: 0,
-		cost: [10000000000, 0.07, "machine10"],
+		cost: [10, 0.17, "machine10"],
 		output: ["machine10", 0.01]
 	},
 	save: {
