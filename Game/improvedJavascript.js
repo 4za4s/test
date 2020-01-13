@@ -1,5 +1,5 @@
 var points = 0;
-var machines = {
+var machinesDefault = {
 	clicker: {
 		name: "Click",
 		clicks: 0,
@@ -94,6 +94,9 @@ var machines = {
 		notThis: 0
 	}
 }
+
+machines = copy(machinesDefault)
+
 for (var title in machines){
 	var btn = document.createElement("BUTTON");
 	var br = document.createElement("BR");
@@ -175,7 +178,7 @@ function save(){
 function removeSave(){
 	localStorage.removeItem("save");
 	localStorage.removeItem("savePoints");
-	window.location.reload();
+	load()
 }
 function loop(){
 	for(var title in machines){
@@ -209,9 +212,15 @@ function load(){
 			}
 		}
 	}
+	else {
+		machines = copy(machinesDefault)	
+	}
 	if (savePoints !== null){
 		points = savePoints;
 		document.getElementById('points').innerHTML = points;
+	}
+	else { 
+		points = 0	
 	}
 }
 load();
