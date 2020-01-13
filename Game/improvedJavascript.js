@@ -130,7 +130,7 @@ for (var title in machines){
 }
 function press(machine){
 	var data = machines[machine];
-	var temp = machines[data.output[2]];
+	var temp = machines[data.cost[2]];
 	if (machine == 'clicker'){
 		points += data.output[1];
 		points = Math.round((points)*100)/100;
@@ -165,7 +165,7 @@ function press(machine){
 			temp.amount = Math.round((temp.amount)*100)/100;
 			
 			document.getElementById('amount' + machine).innerHTML = data.amount;
-			document.getElementById('amount' + machine.output[2]).innerHTML = temp.amount;
+			document.getElementById('amount' + machine.cost[2]).innerHTML = temp.amount;
 			document.getElementById('cost' + machine).innerHTML = data.cost[0];
 		}
 	}
