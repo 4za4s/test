@@ -95,7 +95,7 @@ var machinesDefault = {
 	}
 }
 
-machines = copy(machinesDefault)
+machines = [machinesDefault]
 
 for (var title in machines){
 	var btn = document.createElement("BUTTON");
@@ -213,7 +213,7 @@ function load(){
 		}
 	}
 	else {
-		machines = copy(machinesDefault)	
+		machines = [machinesDefault]	
 	}
 	if (savePoints !== null){
 		points = savePoints;
