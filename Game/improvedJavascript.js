@@ -33,7 +33,7 @@ var machinesDefault = {
 		name: "Machine 4",
 		clicks: 0,
 		amount: 0,
-		cost: [10, 0.1 "machine3"],
+		cost: [10, 0.1, "machine3"],
 		output: ["machine3", 0.01]
 	},
 	machine5: {
