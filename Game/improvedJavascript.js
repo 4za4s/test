@@ -3,7 +3,7 @@ var machines = {
 	clicker: {
 		name: ["Click"],
 		clicks: 0,
-		cost: [0, 0, "points"]
+		cost: [0, 0, "points"],
 		output: ["points", 0.1] 
 	},
 	machine1: {
