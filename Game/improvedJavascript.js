@@ -9,14 +9,14 @@ var machines = {
 		name: "Machine 1",
 		clicks: 0,
 		amount: 0,
-		cost: [1, 0.07, "points"]
+		cost: [1, 0.07, "points"],
 		output: ["points", 0.01]
 	},
 	machine2: {
 		name: "Machine 2",
 		clicks: 0,
 		amount: 0,
-		cost: [10, 0.07, "machine1"]
+		cost: [10, 0.07, "machine1"],
 		output: ["machine1", 0.01]
 	},
 	machine3: {
