@@ -151,7 +151,7 @@ function press(machine){
 		}
 		document.getElementById('points').innerHTML = points;
 	}
-	else if (temp.amount >= data.cost[0]){
+	else if ((temp != undefined) && (temp.amount >= data.cost[0])){
 		temp.amount -= data.cost[0];
 		data.clicks += 1;
 		data.cost[0] += data.cost[1]*data.clicks;
