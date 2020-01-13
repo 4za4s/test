@@ -1,7 +1,7 @@
 var points = 0;
 var machines = {
 	clicker: {
-		name: ["Click"],
+		name: "Click",
 		clicks: 0,
 		amount: 0,
 		cost: [0, 0, "points"],
@@ -176,7 +176,7 @@ function removeSave(){
 function loop(){
 	for(var title in machines){
 		var data = machines[title];
-		if(data.cost !== undefined){
+		if(data.name !== "Click"){
 			if(data.output[0] == 'points'){
 				points += data.output[1]*data.amount;
 				points = Math.round((points)*100)/100;
