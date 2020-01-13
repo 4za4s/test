@@ -3,6 +3,7 @@ var machines = {
 	clicker: {
 		name: ["Click"],
 		clicks: 0,
+		cost: [0, 0, "points"]
 		output: ["points", 0.1] 
 	},
 	machine1: {
@@ -131,43 +132,33 @@ for (var title in machines){
 function press(machine){
 	var data = machines[machine];
 	var temp = machines[data.cost[2]];
-	if (machine == 'clicker'){
-		points += data.output[1];
-		points = Math.round((points)*100)/100;
-		document.getElementById('points').innerHTML = points;
+	if ((temp == "points") && (points >= data.cost[0])){
+		points -= data.cost[0];
 		data.clicks += 1;
+		data.cost[0] += data.cost[1]*data.clicks;
+		data.amount += 1;
+
+		data.cost[0] = Math.round((data.cost[0])*100)/100;
+		data.amount = Math.round((data.amount)*100)/100;
+		points = Math.round((points)*100)/100;
+
+		document.getElementById('amount' + machine).innerHTML = data.amount;
+		document.getElementById('cost' + machine).innerHTML = data.cost[0];
+		document.getElementById('points').innerHTML = points;
 	}
-	if (temp == "points"){
-		if (points >= data.cost[0]){
-			points -= data.cost[0];
-			data.clicks += 1;
-			data.cost[0] += data.cost[1]*data.clicks;
-			data.amount += 1;
+	else if (temp.amount >= data.cost[0]){
+		temp.amount -= data.cost[0];
+		data.clicks += 1;
+		data.cost[0] += data.cost[1]*data.clicks;
+		data.amount += 1;
 
-			data.cost[0] = Math.round((data.cost[0])*100)/100;
-			data.amount = Math.round((data.amount)*100)/100;
-			points = Math.round((points)*100)/100;
-
-			document.getElementById('amount' + machine).innerHTML = data.amount;
-			document.getElementById('cost' + machine).innerHTML = data.cost[0];
-			document.getElementById('points').innerHTML = points;
-		}
-	}
-	else {
-		if (temp.amount >= data.cost[0]){
-			temp.amount -= data.cost[0];
-			data.clicks += 1;
-			data.cost[0] += data.cost[1]*data.clicks;
-			data.amount += 1;
-
-			data.cost[0] = Math.round((data.cost[0])*100)/100;
-			data.amount = Math.round((data.amount)*100)/100;
-			temp.amount = Math.round((temp.amount)*100)/100;
+		data.cost[0] = Math.round((data.cost[0])*100)/100;
+		data.amount = Math.round((data.amount)*100)/100;
+		temp.amount = Math.round((temp.amount)*100)/100;
 			
-			document.getElementById('amount' + machine).innerHTML = data.amount;
-			document.getElementById('amount' + machine.cost[2]).innerHTML = temp.amount;
-			document.getElementById('cost' + machine).innerHTML = data.cost[0];
-		}
+		document.getElementById('amount' + machine).innerHTML = data.amount;
+		document.getElementById('amount' + machine.cost[2]).innerHTML = temp.amount;
+		document.getElementById('cost' + machine).innerHTML = data.cost[0];
 	}
 }
 function save(){
