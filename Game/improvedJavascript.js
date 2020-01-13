@@ -133,7 +133,7 @@ for (var title in machines){
 function press(machine){
 	var data = machines[machine];
 	var temp = machines[data.cost[2]];
-	if ((temp.cost[2] == "points") && (points >= data.cost[0])){
+	if ((data.cost[2] == "points") && (points >= data.cost[0])){
 		points -= data.cost[0];
 		data.clicks += 1;
 		data.cost[0] += data.cost[1]*data.clicks;
