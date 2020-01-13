@@ -165,7 +165,7 @@ function press(machine){
 		temp.amount = Math.round((temp.amount)*100)/100;
 			
 		document.getElementById('amount' + machine).innerHTML = data.amount;
-		document.getElementById('amount' + machine.cost[2]).innerHTML = temp.amount;
+		document.getElementById('amount' + data.cost[2]).innerHTML = temp.amount;
 		document.getElementById('cost' + machine).innerHTML = data.cost[0];
 	}
 }
