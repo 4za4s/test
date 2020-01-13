@@ -5,7 +5,8 @@ var machines = {
 		clicks: 0,
 		amount: 0,
 		cost: [0, 0, "points"],
-		output: ["points", 0.1] 
+		output: ["points", 0.1],
+		notThis: 0
 	},
 	machine1: {
 		name: "Machine 1",
@@ -85,10 +86,12 @@ var machines = {
 		output: ["machine10", 0.01]
 	},
 	save: {
-		name: "Save"
+		name: "Save",
+		notThis: 0
 	},
 	removeSave: {
-		name: "Remove Save"
+		name: "Remove Save",
+		notThis: 0
 	}
 }
 for (var title in machines){
@@ -177,7 +180,7 @@ function removeSave(){
 function loop(){
 	for(var title in machines){
 		var data = machines[title];
-		if(data.name != "Click"){
+		if(data.notThis == undefined){
 			if(data.output[0] == 'points'){
 				points += data.output[1]*data.amount;
 				points = Math.round((points)*100)/100;
