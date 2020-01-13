@@ -203,11 +203,9 @@ function load(){
 		machines = savegame;
 		for(var title in machines){
 			var data = machines[title];
-			if(data.amount !== undefined && data.cost !== undefined){
-				if(data.amount !== null && data.cost !== null){
-					document.getElementById('amount' + title).innerHTML = data.amount;
-					document.getElementById('cost' + title).innerHTML = data.cost[0];
-				}
+			if(data.notThis == undefined){
+				document.getElementById('amount' + title).innerHTML = data.amount;
+				document.getElementById('cost' + title).innerHTML = data.cost[0];
 			}
 		}
 	}
