@@ -4,7 +4,7 @@ var machines = {
 		name: "Click",
 		clicks: 0,
 		amount: 0,
-		cost: [0, 0, "points"],
+		cost: [-1, 0, "points"],
 		output: ["points", 0.1],
 		notThis: 0
 	},
