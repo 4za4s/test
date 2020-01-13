@@ -142,9 +142,10 @@ function press(machine){
 		data.cost[0] = Math.round((data.cost[0])*100)/100;
 		data.amount = Math.round((data.amount)*100)/100;
 		points = Math.round((points)*100)/100;
-
-		document.getElementById('amount' + machine).innerHTML = data.amount;
-		document.getElementById('cost' + machine).innerHTML = data.cost[0];
+		if (data.name != "Click"){
+			document.getElementById('amount' + machine).innerHTML = data.amount;
+			document.getElementById('cost' + machine).innerHTML = data.cost[0];
+		}
 		document.getElementById('points').innerHTML = points;
 	}
 	else if (temp.amount >= data.cost[0]){
@@ -176,7 +177,7 @@ function removeSave(){
 function loop(){
 	for(var title in machines){
 		var data = machines[title];
-		if(data.name !== "Click"){
+		if(data.name != "Click"){
 			if(data.output[0] == 'points'){
 				points += data.output[1]*data.amount;
 				points = Math.round((points)*100)/100;
