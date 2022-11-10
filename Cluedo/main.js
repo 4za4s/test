@@ -1,33 +1,3 @@
-Who = {
-    "Green": undefined,
-    "Mustard": undefined,
-    "Peacock": undefined,
-    "Plum": undefined,
-    "Scarlet": undefined,
-    "White": undefined,
-}
-
-What = {
-    "Wrench": undefined,
-    "Candlestick": undefined,
-    "Dagger": undefined,
-    "Pistol": undefined,
-    "LeadPipe": undefined,
-    "Rope": undefined,
-}
-
-Where = {
-    "Bathroom": undefined,
-    "Study": undefined,
-    "DinningRoom": undefined,
-    "GamesRoom": undefined,
-    "Garage": undefined,
-    "Bedroom": undefined,
-    "LivingRoom": undefined,
-    "Kitchen": undefined,
-    "Courtyard": undefined,
-}
-
 var Players = {}
 class Player {
     cards = {
@@ -45,7 +15,7 @@ class Player {
         "rope": undefined,
         "bathroom": undefined,
         "study": undefined,
-        "dinningroom": undefined,
+        "diningroom": undefined,
         "gamesroom": undefined,
         "garage": undefined,
         "bedroom": undefined,
@@ -158,7 +128,7 @@ function main() {
         } else 
 
         if (command[0] == "cards") {
-            message.innerText = "green\nmustard\npeacock\nplum\nscarlet\nwhite\n\nwrench\ncandlestick\ndagger\npistol\nleadpipe\nrope\n\nbathroom\nstudy\ndinningroom\ngamesroom\ngarage\nbedroom\nlivingroom\nkitchen\ncourtyard\n"
+            message.innerText = "green\nmustard\npeacock\nplum\nscarlet\nwhite\n\nwrench\ncandlestick\ndagger\npistol\nleadpipe\nrope\n\nbathroom\nstudy\ndiningroom\ngamesroom\ngarage\nbedroom\nlivingroom\nkitchen\ncourtyard\n"
         } else 
         if (command[0] == "create" && command[1] != undefined) {
             message.innerText = "created player " + command[1]
