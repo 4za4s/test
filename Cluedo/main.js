@@ -71,6 +71,11 @@ class Player {
                 message += cards[z] + " "
                 if (this.cards[cards[z]] == undefined) {
                     document.getElementById(this.name).querySelector("#" + cards[z]).className = "playercouldhave"
+                } else if (this.cards[cards[z]] == true) {
+                    for (var i = 0; i < cards.length; i++) {
+                        document.getElementById(this.name).querySelector("#" + cards[i]).classList.remove("playercouldhave")
+                    }
+                    return "No information can be gained from this"
                 }
             } else {
                 return "Invalid card: " + cards[z]
@@ -102,9 +107,6 @@ function round(player, cards){
         }
     }
     if (unknown == 1) {
-        for (var z = 0; z < cards.length; z++) {
-            document.getElementById(player.name).querySelector("#" + cards[z]).classList.remove("playercouldhave")
-        }
         player.has(cards[index])
     }
 }
