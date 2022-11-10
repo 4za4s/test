@@ -157,7 +157,7 @@ function main() {
         if (command[0] == "cards") {
             message.innerText = "green\nmustard\npeacock\nplum\nscarlet\nwhite\n\nwrench\ncandelstick\ndagger\npistol\nleadpipe\nrope\n\nbathroom\nstudy\ndinningroom\ngamesroom\ngarage\nbedroom\nlivingroom\nkitchen\ncourtyard\n"
         } else 
-        if (command[0] == "create") {
+        if (command[0] == "create" && command[1] != undefined) {
             message.innerText = "created player " + command[1]
             createPlayer(command[1])
         } else 
