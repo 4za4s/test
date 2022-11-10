@@ -132,6 +132,9 @@ function round(player, cards){
         }
     }
     if (unknown == 1) {
+        for (var z = 0; z < cards.length; z++) {
+            document.getElementById(player.name).querySelector("#" + cards[z]).classList.remove("playercouldhave")
+        }
         player.has(cards[index])
     }
 }
