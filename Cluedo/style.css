@@ -1,0 +1,85 @@
+#console {
+    display: flexbox;
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #fff;
+    height: 95%;
+    width: 300px;
+    border: 1px solid #a7a7a7;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 4px;
+    border-bottom: 4px solid #a7a7a7;
+    line-height: 20px;
+}
+
+#input {
+    position: absolute;
+    width: 97%;
+    left: 5;
+    bottom: 5;
+}
+
+#message {
+    white-space: normal;
+    float: inline-end;
+    line-height: 10;
+}
+
+#players {
+    color: rgb(50, 50, 50);
+    display: inline;
+}
+
+.name {
+    font-size: 19;
+    font-weight: bold;
+}
+
+.guesses {
+    font-size: 14;
+    line-height: 0;
+    display: inline-block;
+    padding-right: 10;
+}
+
+.known {
+    color: rgb(156, 156, 156);
+    text-decoration: line-through;
+}
+
+.has {
+    color: rgb(40, 220, 0);
+}
+
+.notHas {
+    color: rgb(240, 0, 0);
+    text-decoration: line-through;
+}
+
+.murder {
+    color: red;
+}
+
+.notmurder {
+    opacity: 50%;
+    color: grey;
+    text-decoration: line-through;
+}
+
+.playerhas {
+    color: green;
+}
+
+.playernothas {
+    color: red;
+    text-decoration: line-through;
+    opacity: 50%;
+}
+
+.playercouldhave {
+    color: rgb(177, 186, 13);
+}
