@@ -9,7 +9,7 @@ Who = {
 
 What = {
     "Wrench": undefined,
-    "Candelstick": undefined,
+    "Candlestick": undefined,
     "Dagger": undefined,
     "Pistol": undefined,
     "LeadPipe": undefined,
@@ -38,7 +38,7 @@ class Player {
         "scarlet": undefined,
         "white": undefined,
         "wrench": undefined,
-        "candelstick": undefined,
+        "candlestick": undefined,
         "dagger": undefined,
         "pistol": undefined,
         "leadpipe": undefined,
@@ -155,7 +155,7 @@ function main() {
         } else 
 
         if (command[0] == "cards") {
-            message.innerText = "green\nmustard\npeacock\nplum\nscarlet\nwhite\n\nwrench\ncandelstick\ndagger\npistol\nleadpipe\nrope\n\nbathroom\nstudy\ndinningroom\ngamesroom\ngarage\nbedroom\nlivingroom\nkitchen\ncourtyard\n"
+            message.innerText = "green\nmustard\npeacock\nplum\nscarlet\nwhite\n\nwrench\ncandlestick\ndagger\npistol\nleadpipe\nrope\n\nbathroom\nstudy\ndinningroom\ngamesroom\ngarage\nbedroom\nlivingroom\nkitchen\ncourtyard\n"
         } else 
         if (command[0] == "create" && command[1] != undefined) {
             message.innerText = "created player " + command[1]
